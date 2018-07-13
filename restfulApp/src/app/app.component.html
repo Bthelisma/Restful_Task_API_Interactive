@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        {{ title }}!
+
+        <button (click)="onButtonClick($event)">Click to get all tasks</button>
+
+    </h1>
+    <!-- s -->
+</div>
+
+
+<br>
+<div *ngIf="getTasksFromService">
+    <h2>All the tasks</h2>
+    <ul *ngFor="let t of tasks">
+        <li>{{t.title}} - {{t.description}}</li>
+    </ul>
+</div>
